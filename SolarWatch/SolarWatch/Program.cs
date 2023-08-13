@@ -1,4 +1,7 @@
-using SolarWatch.Services;
+using SolarWatch.Services.OpeningApis;
+using SolarWatch.Services.Processors;
+using SolarWatch.Services.Provider;
+using SolarWatch.Services.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,8 @@ builder.Services.AddSingleton<ICordinatesProcessor, CordinatesProcessor>();
 builder.Services.AddSingleton<ISolarWatchProvider, SolarWatchProvider>();
 builder.Services.AddSingleton<IOpenGeocodingApi, OpenGeocodingApi>();
 builder.Services.AddSingleton<IOpenSunsetAndSunriseApi, OpenSunsetAndSunriseApi>();
+builder.Services.AddSingleton<ICityRepository, CityRepository>();
+builder.Services.AddSingleton<ISunsetSunriseRepository, SunsetSunriseRespoitory>();
 
 var app = builder.Build();
 

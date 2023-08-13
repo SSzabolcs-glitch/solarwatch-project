@@ -3,7 +3,10 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using SolarWatch;
 using SolarWatch.Controllers;
-using SolarWatch.Services;
+using SolarWatch.Services.OpeningApis;
+using SolarWatch.Services.Processors;
+using SolarWatch.Services.Provider;
+using SolarWatch.Services.Repository;
 using System;
 
 namespace SolarWatchTest
@@ -16,6 +19,8 @@ namespace SolarWatchTest
         private Mock<IOpenGeocodingApi> _geocodingApiMock;
         private Mock<IOpenSunsetAndSunriseApi> _sunsetAndSunriseApi;
         private Mock<ISolarWatchProvider> _providerMock;
+        private Mock<ICityRepository> _cityRepositoryMock;
+        private Mock<ISunsetSunriseRepository> _sunsetSunriseRepositoryMock;
         private SolarWatchController _controller;
 
         [SetUp]
@@ -26,7 +31,9 @@ namespace SolarWatchTest
             _geocodingApiMock = new Mock<IOpenGeocodingApi>();
             _sunsetAndSunriseApi = new Mock<IOpenSunsetAndSunriseApi>();
             _providerMock = new Mock<ISolarWatchProvider>();
-            _controller = new SolarWatchController(_loggerMock.Object, _processorMock.Object, _geocodingApiMock.Object, _providerMock.Object, _sunsetAndSunriseApi.Object);
+            _cityRepositoryMock = new Mock<ICityRepository>();
+            _sunsetSunriseRepositoryMock = new Mock<ISunsetSunriseRepository>();
+            _controller = new SolarWatchController(_loggerMock.Object, _processorMock.Object, _geocodingApiMock.Object, _providerMock.Object, _sunsetAndSunriseApi.Object, _cityRepositoryMock.Object, _sunsetSunriseRepositoryMock.Object);
         }
 
         [Test]

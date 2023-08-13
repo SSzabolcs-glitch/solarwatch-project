@@ -1,4 +1,4 @@
-﻿namespace SolarWatch.Services
+﻿namespace SolarWatch.Services.OpeningApis
 {
     public interface IOpenGeocodingApi
     {

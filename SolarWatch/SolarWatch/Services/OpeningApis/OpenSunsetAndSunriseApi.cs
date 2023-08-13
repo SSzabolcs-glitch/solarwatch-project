@@ -1,7 +1,7 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Net;
 
-namespace SolarWatch.Services
+namespace SolarWatch.Services.OpeningApis
 {
     public class OpenSunsetAndSunriseApi : IOpenSunsetAndSunriseApi
     {
