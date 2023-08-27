@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SolarWatch;
+using SolarWatch.Data;
 
 #nullable disable
 
 namespace SolarWatch.Migrations
 {
-    [DbContext(typeof(SolarWatchDbContext))]
+    [DbContext(typeof(SolarWatchContext))]
     [Migration("20230813113626_InitialCreate")]
     partial class InitialCreate
     {

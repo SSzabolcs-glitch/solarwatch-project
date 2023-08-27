@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SolarWatch.Models;
 
-namespace SolarWatch
+namespace SolarWatch.Data
 {
-    public class SolarWatchDbContext : DbContext
+    public class SolarWatchContext : DbContext
     {
         public DbSet<City> Cities { get; set; }
         public DbSet<SunsetSunrise> SunsetSunrises { get; set; }

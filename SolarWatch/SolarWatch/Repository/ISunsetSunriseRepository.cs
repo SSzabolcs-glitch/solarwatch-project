@@ -1,6 +1,6 @@
 ﻿using SolarWatch.Models;
 
-namespace SolarWatch.Services.Repository
+namespace SolarWatch.Repository
 {
     public interface ISunsetSunriseRepository
     {

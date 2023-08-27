@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SolarWatch;
+using SolarWatch.Data;
 
 #nullable disable
 
 namespace SolarWatch.Migrations
 {
-    [DbContext(typeof(SolarWatchDbContext))]
+    [DbContext(typeof(SolarWatchContext))]
     partial class SolarWatchDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

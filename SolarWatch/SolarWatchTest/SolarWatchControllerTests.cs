@@ -3,10 +3,10 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using SolarWatch;
 using SolarWatch.Controllers;
+using SolarWatch.Repository;
 using SolarWatch.Services.OpeningApis;
 using SolarWatch.Services.Processors;
 using SolarWatch.Services.Provider;
-using SolarWatch.Services.Repository;
 using System;
 
 namespace SolarWatchTest
