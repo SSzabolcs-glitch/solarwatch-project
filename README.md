@@ -20,7 +20,7 @@ Currently this is just an API, that doesn't have a Frontend. It was a Codecool P
 
 ```shell
 $ git clone https://github.com/SSzabolcs-glitch/solarwatch-project.git
-$ cd solarwatch-project
+$ cd solarwatch-project/Solarwatch/solarwatch
 $ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server
 $ dotnet tool install --global dotnet-ef
 $ dotnet add package Microsoft.EntityFrameworkCore.Design
